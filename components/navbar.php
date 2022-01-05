@@ -27,7 +27,6 @@ if (strpos($_SERVER['REQUEST_URI'], 'admin') !== false) {
 
             <div class="nav-links">
                 <a href="home.php" class="nav-link">Accueil</a>
-                <a href="about.php" class="nav-link">À Propos</a>
                 <a href="search.php" class="nav-link">Recherche</a>
 
                 <?php 
@@ -35,6 +34,7 @@ if (strpos($_SERVER['REQUEST_URI'], 'admin') !== false) {
 
                     <a href="loanpage.php" class="nav-link">Mes emprunts</a>                   
                     <a href="profile.php" class="nav-link">Mon compte </a>
+                    <a href="about.php" class="nav-link">À Propos</a>
                     <a href="../php/deconnection.php" class="nav-link">Se déconnecter</a>
                                                      
                 <?php } ?>

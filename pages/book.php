@@ -100,11 +100,17 @@
                     <p>Une fois emprunté vous avez jusqu'au 
                         <span class="due-date">
                         <?php
-                                setlocale (LC_TIME, 'fr_FR.utf8','fra');    
+                                setlocale (LC_TIME, 'fr_FR.utf8','fra');   
                                 $today_date = date_create(date("Y-m-j"));
                                 $today_date = date_add($today_date,date_interval_create_from_date_string("30 days"));
                                 $today_date = date_timestamp_get($today_date);
-                                echo strftime("%d %B %G", $today_date);
+                               
+                                $date_aff = strftime("%d %B %G", $today_date);
+                                
+                                $today_date = utf8_decode($date_aff);
+                                $date_aff = str_replace("?","é", $today_date);
+                                echo $date_aff;
+
                             ?></span> pour lire et rendre ce livre en bibliothèque.
                     </p>
 
