@@ -44,6 +44,7 @@ if (strpos($_SERVER['REQUEST_URI'], 'admin') !== false) {
 
                 <a href="login.php" class="nav-link">Se connecter</a>
                 <a href="signup.php" class="nav-link">S'inscrire</a>
+                <a href="about.php" class="nav-link">À Propos</a>
                     
                 <?php } ?>
 

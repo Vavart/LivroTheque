@@ -170,12 +170,9 @@
             </div>
 
             <div class="search-bar home-search-bar">
-                <h1>Bievenue dans la Livrothèque !</h1>
+                <h1>Bienvenue sur la Livrothèque !</h1>
             </div>
-
-            
-            
-                
+               
                 <div class="redirection-info">
                     <h3>Où souhaitez-vous aller <?= $member_name ?> ?</h3>
                     <p>Choisissez une catégorie ou commencez directement à rechercher un livre !</p>
@@ -270,11 +267,7 @@
                             </a>
                     </div>
                 </div>
-                
-
-        </main>
-        
-        
+        </main>      
     </div>
     
     <?php include "../components/footer.php" ?>
