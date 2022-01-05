@@ -1,0 +1,60 @@
+.form-page .header {
+    h1 {
+        font-size: 55px;
+        text-align: center;
+        font-family: "Abril Fatface", serif;
+    }
+    p {
+        margin-top: 10px;
+        font-size: 20px;
+        text-align: center;
+    }
+    a {color: $white;}
+
+    .notification {
+        color: $fail;
+    }
+}
+
+.form-page form {
+    width: clamp(280px, 20vw, 420px);
+    margin: 50px auto 20px;
+}
+
+form .field {
+    display: flex;
+    flex-direction: column;
+    margin: 25px 0;
+}
+
+form .field label {
+    font-size: 20px;
+}
+
+form .field input {
+    margin-top: 7px;
+    display: block;
+    font-size: 20px;
+    background: $light-brown;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: $white;
+    border: none;
+    outline: none;
+
+    &::placeholder {
+        color: $white;
+        font-style: italic;
+        opacity: 0.6;
+    }
+}
+form button {
+    @include btn-cta;
+    display: block;
+} 
+
+@media screen and (max-width: 450px) {
+    .form-page .header {
+        h1 {font-size: 40px;}
+    }
+}

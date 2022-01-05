@@ -1,0 +1,57 @@
+.title {
+    margin-top: 20px;
+    font-size: clamp(30px, 5vw, 60px);
+    text-align: center;
+    font-family: "Abril Fatface", serif;
+}
+
+h1 ~ hr {
+    display: block;
+    width: 40vw;
+    margin: 20px auto;
+    height: 2px;
+    border-radius: 5px;
+    background: $white;
+}
+
+.description-about {
+    padding: 0 clamp(20px, 20vw, 120px);
+    margin-top: 25px;
+    font-size: clamp(17px, 1.5vw, 20px);
+    text-align: center;
+    line-height: 1.2;
+
+    span {
+        font-weight: 400;
+        text-decoration: underline;
+    }
+}
+
+.cont-medias {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cont-medias a {
+    text-decoration: none;
+}
+
+.cont-medias img {
+    width: 50px;
+    margin: 0 25px;
+}
+
+.cont-btn-cta {
+    display: flex;
+    justify-content: center
+}
+.cont-btn-cta a {
+    @include btn-cta;
+    margin: 50px auto 0;
+    font-size: 22px;
+    // font-family: "Nunito Sans", sans-serif;
+    font-weight: 200;
+    
+}

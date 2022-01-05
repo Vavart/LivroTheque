@@ -1,0 +1,218 @@
+.loan-overlay, .loanpage-modal {
+    display: none;
+}
+
+.loan-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #000;
+    opacity: 0.55;
+    width: 100%;
+    height: 130%;
+    z-index: 10;
+}
+
+.loanpage-modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 50vw;
+    height: auto;
+    background: $dark-brown;
+    border-radius: 5px;
+    padding: 50px 100px;
+    z-index: 15;
+
+    h4 {
+        text-align: center;
+        font-size: clamp(20px, 2.5vw, 30px);
+    }
+
+    p {
+        margin-top: 20px;
+        font-size: 17px;
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    .due-date {
+        text-decoration: underline;
+    }
+
+    form {
+        margin-top: 20px;
+    }
+
+    .close-modal {
+        font-size: 22px;
+        position: absolute;
+        top: 2vw;
+        right: 2vw;
+        outline: none;
+        border: none;
+        cursor: pointer;
+        background: transparent;
+        color: $white;
+    }
+}
+
+@media screen and (max-width: 777px) {
+
+    .loanpage-modal {
+        padding: 10px 20px;
+        width: 80vw;
+    }
+    .close-modal {
+        top: 15px;
+        right: 15px;
+    }
+    
+}
+
+
+.book-showcase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.preview {
+    margin-right: 100px;
+}
+
+.preview img {
+    width: 250px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.book-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.book-description .header {
+    h1 {
+        font-size: clamp(25px, 4vw ,45px);
+        font-weight: 500;
+    }
+
+    h3 {
+        margin-top: 10px;
+        font-size: clamp(18px, 3vw , 30px);
+    }
+
+    p.edition {
+        margin-top: 10px;
+        font-style: italic;
+        font-size: clamp(15px, 2vw , 20px);
+    }
+
+    p.date {
+        margin-top: 10px;
+    }
+
+    p.category {
+        margin-top: 10px;
+        font-size: clamp(15px, 2vw , 20px);
+    }
+}
+
+.book-description .body {
+
+    margin-top: 25px;
+
+    h3 {
+        font-size: clamp(20px, 2.5vw , 30px);
+        text-decoration: underline;   
+    }
+
+    p {
+        margin-top: 10px;
+        font-size: clamp(15px, 1.7vw , 17px);
+    }
+}
+
+.book-description .footer {
+    margin-top: 25px;
+
+    p.availability {
+        font-size: clamp(15px, 2vw , 20px);
+    }
+
+    p.availability .yesstock {
+        color: $success;
+    }
+    p.availability .nostock {
+        color: $fail;
+    }
+
+    p.isloaned {
+        margin-top: 20px;
+    }
+
+    p.deadline {
+        margin-top: 10px;
+        font-size: clamp(15px, 2vw , 20px);
+
+        span.date {
+            font-weight: 800;
+        }
+    }
+
+    .need-to-be-connected {
+        margin-top: 20px;
+
+        a {
+            color: $white;
+        }
+    }
+
+    .too-much-books-loaned {
+        margin-top: 20px;
+        font-size: 17px
+    }
+
+    .book-reservation {
+        @include btn-cta;
+        margin-top: 10px;
+    }
+
+    .book-loaned, .book-loaned-fail {
+        margin-top: 15px;
+        font-size: clamp(16px, 2vw , 22px);
+        color: $success;
+        font-weight: 700;
+
+        a {
+            color: $success;
+
+        }
+
+    }
+
+    .book-loaned-fail {
+        color: $fail;
+    }
+}
+
+
+@media screen and (max-width: 777px) {
+    .book-showcase {
+        flex-direction: column;
+    }
+
+    .preview {
+        margin: 0 0 50px;
+    }
+
+    .book-description {
+        width: 100%;
+    }
+}

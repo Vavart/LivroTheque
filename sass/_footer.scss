@@ -1,0 +1,14 @@
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $light-brown;
+    height: 75px;
+    margin: 20px clamp(40px, 8vw, 120px);
+    border-radius: 5px;
+}
+
+footer p {
+    font-size: clamp(17px, 2vw, 27px);
+    text-align: center;
+}

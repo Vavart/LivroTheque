@@ -1,0 +1,483 @@
+.connection-info-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+
+    .btn-cta {
+        @include btn-cta;
+
+    }
+}
+
+.connection-info {
+    margin: 20px 0;
+    font-size: 17px;
+}
+.connection-info span {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 20px;
+    font-weight: 400;
+}
+.connection-info a {
+    color: $white;
+}
+
+.main-grid {
+    display: grid;
+    grid-template: repeat(2,75px) 1fr / 1fr 1fr 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 40px;
+    padding-bottom: 50px;
+}
+
+.search-fields {
+    grid-area: 1 / 1 / -1 / 2;
+    @include borderboxshadow;
+}
+
+.cont-labels {
+    text-align: left;
+}
+
+
+.cont-label, .cont-label h3, .search-fields h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px 25px;
+}
+
+.cont-label {
+    justify-content: space-between;
+}
+
+.search-fields h3 {
+    border-bottom: 1px solid $white;
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.search-criterias {
+
+
+    .criteria {
+        padding: 20px;
+
+        h4 {
+            font-size: 20px;
+            font-weight: 400;
+            text-decoration: underline;
+        }
+
+        label {
+            font-size: 16px;
+            cursor: pointer;
+            margin-right: 15px;
+        }
+    
+        input {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border-radius: 5px;
+            width: 20px;
+            height: 20px;
+            border: 1px solid $white;
+            transition: 0.1s all linear;
+            cursor: pointer;
+        }
+
+        input:checked {
+            border: 6px solid $white;
+        }
+    }
+
+    .criteria.c2 {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    button {
+        margin: 35px auto 20px;
+    }
+    
+
+}
+.search-bar {
+    grid-area: 1 / 2 / 2 / -1 ;
+    @include borderboxshadow;
+    width: 100%;
+    display: flex;
+    // justify-content: space-between;
+    align-items: center;
+    padding: 5px 25px;
+}
+
+// .search-bar.anime {
+//     animation: clignote 2s ease-in-out;
+// }
+
+// @keyframes clignote {
+//     0% {
+//         box-shadow: 0px 0px 0px #fff;
+//     }
+    
+//     25% {
+//         box-shadow: 0px 0px 15px #fff;
+//     }
+    
+//     100% {
+//         box-shadow: 0px 0px 0px #fff;
+//     }
+// }
+
+.search-bar.home-search-bar {
+    grid-area: 1 / 2 / 2 / -1 ;
+    padding: 10px 25px;
+    place-content: center;
+}
+
+.search-bar.search-search-bar {
+    grid-area: 1 / 2 / 2 / -1 ;
+    padding: 10px 25px;
+
+}
+
+.search-bar.search-bar.home-search-bar h1 {
+    font-family: 'Abril Fatface', serif;
+    font-size: clamp(25px, 3.5vw, 40px);
+    text-align: center
+}
+
+.search-bar form {
+    @include borderboxshadow;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 25px;
+}
+
+.search-bar input {
+    width: 80%;
+    height: 70px;
+    background: $light-brown;
+    font-size: 23px;
+    outline: none;
+    border: none;
+    color: $white;
+    
+    &::placeholder {
+        color: $white;
+        font-style: italic;
+        opacity: 0.6;
+    }
+}
+
+.search-bar .search-icon {
+    margin-right: 15px;
+}
+
+.search-bar img {
+    width: clamp(25px, 5vw, 40px);
+}
+
+.search-bar button {
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+
+.redirection-info {
+    grid-area: 2 / 2 / 3 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+
+.redirection-info h3 {
+    font-size: 27px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.redirection-info p {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.loan-section {
+    grid-area: 3 / 2 / -1 / 3;
+}
+
+.loan-section img, .discover-section img {
+    width: 75px;
+    height: 115px;
+    object-fit: cover;
+}
+
+.discover-section {
+    grid-area: 3 / 3 / -1 / 4;
+}
+
+.loan-section, .discover-section {
+    @include borderboxshadow;
+    padding: 25px 25px 90px;
+    position: relative;
+}
+
+.loan-header h4, .discover-section h4 {
+    font-size: 32px;
+    font-family: "Abril Fatface", serif;
+    text-align: center;
+}
+
+.loan-header p, .discover-section p {
+    font-size: 15px;
+    margin-top: 7px;
+    text-align: center;
+}
+.loan-body, .discover-body {
+    margin-top: 25px;
+}
+
+.loan-body h5, .discover-body h5 {
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+.loan-body-unsubscribed {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    height: auto;
+    font-size: 20px;
+
+    h4 {
+        font-size: 24px;
+    }
+
+    p {
+        margin-top: 50px;
+
+    }
+    a {
+        color: $white;
+    }
+}
+
+.loan-body .no-loans-books {
+    margin-top: 20px;
+    text-align: center;
+
+    a {
+        color: $white;
+    }
+}
+
+.cont-books {
+    margin: 12px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.loan-footer, .discover-footer {
+    position: absolute;
+    left: 50%;
+    bottom: 5px;
+    transform: translate(-50%,-50%);
+}
+
+.discover-footer a {
+    @include btn-cta;
+}
+
+.loan-footer a, .discover-footer button {
+    @include btn-cta;
+    width: 250px;
+}
+
+@media screen and (max-width: 1150px) {
+    .loan-footer a {
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .main-grid {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .cont-label, .cont-label h3, .search-fields h3 {
+        border: none;
+        padding: 10px 25px;
+    }
+
+    .cont-labels {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        
+    }
+
+    .loan-section, .discover-section {
+        @include borderboxshadow;
+        padding: 25px 25px 40px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .loan-footer, .discover-footer {
+        position: relative;
+        left: 0;
+        bottom: 0;
+        transform: translate(0%,0%);
+        margin: 0 auto;
+        margin-top: 20px;
+        
+    }
+}
+
+@media screen and (max-width: 666px) {
+    .main-grid {
+        padding-bottom: 20px;
+    }
+
+    .search-bar {
+        padding: 5px 10px;
+    }
+    .search-bar input {
+        font-size: 18px;
+        width: 87%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    .search-bar .launch-search-btn {
+        display: none;
+    }
+}
+
+// Partie recherche
+
+.searching-content {
+    grid-area: 2 / 2 / -1 / -1;
+}
+
+.searched-item {
+    padding: 10px 25px;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 2px solid $light-brown;
+}
+
+.searched-item .preview img {
+    width: 75px;
+    height: 115px;
+    object-fit: cover;
+}
+
+.searched-item .description {
+
+    min-width: 300px;
+
+    h6 {
+        font-size: 17px;
+        font-weight: 600;
+    }
+
+    p {
+        margin-top: 10px;
+        font-size: 15px;
+    }
+
+    p.edition {
+        font-style: italic;
+        font-style: 12px;
+    }
+
+    p.availability {
+        margin-top: 20px;
+    }
+
+    p.availability .yesstock {
+        color: $success;
+    }
+    p.availability .nostock {
+        color: $fail;
+    }
+}
+
+.searched-item .btn-view-book {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        @include btn-cta;
+    }
+}
+
+@media screen and (max-width: 777px) {
+    .searched-item .preview {
+        margin-right: 15px;
+    }
+}
+
+@media screen and (max-width: 666px) {
+    .searched-item {
+        padding: 0;
+        margin-top: 20px;
+        display: grid;
+        grid-template: 100px 50px / 1fr;
+        grid-gap: 10px;
+        height: auto;
+
+        .preview {
+            grid-area: 1 / 1 / 2 / 2;
+            
+        }
+        .description {
+            grid-area: 1 / 2 / 2 / 3;
+        }
+        .btn-view-book {
+            grid-area: 2 / 1 / 3 / 3;
+        }    
+    }
+
+    .searched-item .description {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        min-width: 220px;
+    
+        p {
+            margin-top: 0px;
+        }
+    
+        p.edition {
+            font-style: 0px;
+        }
+    
+        p.availability {
+            margin-top: 0px;
+        }
+    }
+}
+
+
+
+// .searching-content {display: none;}
+
+// .redirection-info, .loan-section, .discover-section {display: none;}

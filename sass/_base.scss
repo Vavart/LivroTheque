@@ -1,0 +1,27 @@
+body {
+    background: $dark-brown;
+    overflow-x: hidden;
+    // width: 100vw;
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 200;
+    color: $white;
+
+    // Pour que le footer reste en bas
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.page {
+    min-height: 625px;
+    padding: 0 clamp(10px, 10vw, 150px);
+    // overflow: hidden;
+}
+
+@media screen and (max-width: 478px) {
+    .page {
+        min-height: 325px;
+        padding: 0 clamp(10px, 5vw, 150px);
+    }
+}

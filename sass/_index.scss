@@ -1,0 +1,68 @@
+.main-content {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 5;
+}
+
+.main-content h1 {
+    @include title;
+    font-size: clamp(45px, 7vw, 90px);
+    // letter-spacing: 12px;
+}
+
+.main-content h2 {
+    @include subtitle;
+    font-size: clamp(25px, 3.5vw, 45px);
+    margin-top: 20px;
+}
+.cont-links {
+    margin: 30px auto 0;
+}
+
+.cont-links .cont-btn-cta {
+    display: flex;
+    justify-content: c
+}
+.cont-links  .cont-btn-cta a {
+    @include btn-cta;
+    font-size: clamp(17px, 2vw, 27px);
+    font-family: "Nunito Sans", sans-serif;
+    font-weight: 200;
+    background: none;
+    border: 2px solid $white;
+}
+
+.cont-links > .btn-cta a {
+    text-decoration: none;
+    color: $white;
+}
+
+.cont-links .links {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-around;
+    font-size: clamp(17px, 2vw, 27px);
+}
+ .links a {
+     color: $white;
+     font-weight: 200;
+ }
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0.55;
+    background: #000;
+}
+
+video {
+    width: 100vw;
+    // Petit hack pour enlever la scrollbar
+    height: 99vh;
+    object-fit: cover;
+}
