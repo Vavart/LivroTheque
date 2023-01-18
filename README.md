@@ -2,7 +2,7 @@
 A library website for curious readers ! <br>
 
 ## About :
-The LivroThèque is a fictive library plateform, allowing the user to loan books from the library stock. Implementation of a login system, stock and client management with a dedicated admin interface.
+The LivroThèque is a fictive library platform, allowing the user to loan books from the library stock. Implementation of a login system, stock and client management with a dedicated admin interface.
 
 ## Next steps :
 
